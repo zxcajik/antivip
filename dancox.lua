@@ -1,46 +1,7 @@
-DANCOX=1
-function START()
-  DCX=gg.multiChoice({
-    'BYPASS', 
-    'SCRIPT FITUR',
-    'EXIT',
-}, nil, 'DANCOXCREW  ')
-if DCX == 1 then bypass() end
-if DCX == 2 then script() end
-if DCX == 3 then exit() end
-DANCOX=-1
-end
-
-function bypass()
-  TG = gg.makeRequest('https://raw.githubusercontent.com/zxcajik/antivip/master/pubg/bypass.lua').content
-  if not TG then
-  os.exit()
-  else
-  pcall(load(TG))
-  end
-end
-
-function script()
-  TG = gg.makeRequest('https://raw.githubusercontent.com/zxcajik/antivip/master/pubg/script.lua').content
-  if not TG then
-  os.exit()
-  else
-  pcall(load(TG))
-  end
-end
-
-
-
-function exit()
+DANCOX = gg.makeRequest("https://raw.githubusercontent.com/zxcajik/antivip/master/dancox-loader.lua").content
+if not DANCOX then
 os.exit()
+else
+pcall(load(DANCOX))
 end
-
-while true do
-if gg.isVisible(true) then
-DANCOX = 1
-gg.setVisible(false)
-end
-if DANCOX == 1 then
-START()
-end
-end
+os.exit()

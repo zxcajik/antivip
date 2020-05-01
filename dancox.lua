@@ -3,7 +3,6 @@ function START()
   DCX=gg.multiChoice({
     'BYPASS', 
     'SCRIPT FITUR',
-    
     'EXIT',
 }, nil, 'DANCOXCREW  ')
 if DCX == 1 then bypass() end

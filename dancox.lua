@@ -1,11 +1,11 @@
 DANCOX=1
 function START()
-  DCX=gg.choice({
-    '\n[BYPASS]\n', 
-    '\n[SCRIPT FITUR]\n',
+  DCX=gg.multiChoice({
+    'BYPASS', 
+    'SCRIPT FITUR',
     
-    '\n[Exit]\n',
-}, nil, 'ANTI VIP ')
+    'EXIT',
+}, nil, 'DANCOXCREW  ')
 if DCX == 1 then bypass() end
 if DCX == 2 then script() end
 if DCX == 3 then exit() end
